@@ -8,20 +8,18 @@
 defined( 'ABSPATH' ) || exit;
 
 // Ensure the class is only loaded once.
-if ( ! class_exists( 'WP_Super_Duper' ) ) {
+if ( ! class_exists( 'WP_V2_Super_Duper' ) ) {
 
 	/**
 	 *
 	 * A Class to be able to create a Widget, Shortcode or Block to be able to output content for WordPress.
-	 *
-	 * View hello-world.php for example usage
 	 *
 	 * @since 1.0.0
 	 * @since 1.0.16 change log moved to file change-log.txt - CHANGED
 	 * @since 2.0.0 shortcode, widget and blocks moved into separate files - CHANGED
 	 * @version 2.0.0
 	 */
-	abstract class WP_Super_Duper {
+	abstract class WP_V2_Super_Duper {
 	
 		public $version = "2.0.2";
 		public $font_awesome_icon_version = "5.11.2";
