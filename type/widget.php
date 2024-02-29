@@ -15,17 +15,17 @@ defined( 'ABSPATH' ) || exit;
  * @since 2.0.0
  * @version 2.0.0
  */
-class WP_Super_Duper_Widget extends WP_Widget {
+class WP_V2_Super_Duper_Widget extends WP_Widget {
 
 	/**
-	 * @var WP_Super_Duper
+	 * @var WP_V2_Super_Duper
 	 */
 	protected $sd;
 
 	/**
 	 * Class constructor.
 	 *
-	 * @param WP_Super_Duper $super_duper
+	 * @param WP_V2_Super_Duper $super_duper
 	 */
 	public function __construct( $super_duper ) {
 		$this->sd = $super_duper;
@@ -62,19 +62,19 @@ class WP_Super_Duper_Widget extends WP_Widget {
 	/**
 	 * Enqeues scripts.
 	 *
-	 * @param WP_Super_Duper $super_duper
+	 * @param WP_V2_Super_Duper $super_duper
 	 */
 	public static function enqueue_scripts() {
-		wp_add_inline_script( 'admin-widgets', WP_Super_Duper::widget_js() );
-		wp_add_inline_script( 'customize-controls', WP_Super_Duper::widget_js() );
-		wp_add_inline_style( 'widgets', WP_Super_Duper::widget_css() );
+		wp_add_inline_script( 'admin-widgets', WP_V2_Super_Duper::widget_js() );
+		wp_add_inline_script( 'customize-controls', WP_V2_Super_Duper::widget_js() );
+		wp_add_inline_style( 'widgets', WP_V2_Super_Duper::widget_css() );
 	}
 
 	/**
 	 * Add our widget CSS to elementor editor.
 	 */
 	public static function elementor_editor_styles() {
-		wp_add_inline_style( 'elementor-editor', WP_Super_Duper::widget_css( false ) );
+		wp_add_inline_style( 'elementor-editor', WP_V2_Super_Duper::widget_css( false ) );
 	}
 
 	/**

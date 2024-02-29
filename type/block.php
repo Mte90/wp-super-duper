@@ -15,17 +15,17 @@ defined( 'ABSPATH' ) || exit;
  * @since 2.0.0
  * @version 2.0.0
  */
-class WP_Super_Duper_Block {
+class WP_V2_Super_Duper_Block {
 
 	/**
-	 * @var WP_Super_Duper
+	 * @var WP_V2_Super_Duper
 	 */
 	protected $sd;
 
 	/**
 	 * Class constructor.
 	 *
-	 * @param WP_Super_Duper $super_duper
+	 * @param WP_V2_Super_Duper $super_duper
 	 */
 	public function __construct( $super_duper ) {
 
@@ -96,7 +96,7 @@ class WP_Super_Duper_Block {
 	public function register_block() {
 		wp_add_inline_script( 'wp-blocks', $this->block() );
 		if ( class_exists( 'SiteOrigin_Panels' ) ) {
-			wp_add_inline_script( 'wp-blocks', WP_Super_Duper::siteorigin_js() );
+			wp_add_inline_script( 'wp-blocks', WP_V2_Super_Duper::siteorigin_js() );
 		}
 	}
 

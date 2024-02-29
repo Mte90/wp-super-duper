@@ -15,17 +15,17 @@ defined( 'ABSPATH' ) || exit;
  * @since 2.0.0
  * @version 2.0.0
  */
-class WP_Super_Duper_Shortcode {
+class WP_V2_Super_Duper_Shortcode {
 
 	/**
-	 * @var WP_Super_Duper
+	 * @var WP_V2_Super_Duper
 	 */
 	protected $sd;
 
 	/**
 	 * Class constructor.
 	 *
-	 * @param WP_Super_Duper $super_duper
+	 * @param WP_V2_Super_Duper $super_duper
 	 */
 	public function __construct( $super_duper ) {
 
@@ -405,7 +405,7 @@ class WP_Super_Duper_Shortcode {
 		</style>
 		<?php
 		if ( class_exists( 'SiteOrigin_Panels' ) ) {
-			echo "<script>" . WP_Super_Duper::siteorigin_js() . "</script>";
+			echo "<script>" . WP_V2_Super_Duper::siteorigin_js() . "</script>";
 		}
 		?>
 		<script>
@@ -781,8 +781,8 @@ class WP_Super_Duper_Shortcode {
 			$form = ob_get_clean();
 
 			echo "<form id='$shortcode'>" . $form . "<div class='widget-control-save'></div></form>";
-			echo "<style>" . WP_Super_Duper::widget_css() . "</style>";
-			echo "<script>" . WP_Super_Duper::widget_js() . "</script>";
+			echo "<style>" . WP_V2_Super_Duper::widget_css() . "</style>";
+			echo "<script>" . WP_V2_Super_Duper::widget_js() . "</script>";
 			exit;
 
 		}

@@ -156,9 +156,9 @@ if ( ! class_exists( 'WP_V2_Super_Duper' ) ) {
 	
 			// Output type id and class.
 			$types = array(
-				'block'     => 'WP_Super_Duper_Block',
-				'shortcode' => 'WP_Super_Duper_Shortcode',
-				'widget'    => 'WP_Super_Duper_Widget',
+				'block'     => 'WP_V2_Super_Duper_Block',
+				'shortcode' => 'WP_V2_Super_Duper_Shortcode',
+				'widget'    => 'WP_V2_Super_Duper_Widget',
 			);
 	
 			// Maybe disable widgets.
@@ -714,7 +714,7 @@ if ( ! class_exists( 'WP_V2_Super_Duper' ) ) {
 			add_settings_field(
 				'sd_load_widgets',
 				'<label for="sd_load_widgets">' . __( 'Load Super Duper Widgets' ) . '</label>',
-				'WP_Super_Duper::load_widgets_setting_html',
+				'WP_V2_Super_Duper::load_widgets_setting_html',
 				'general'
 			);
 	
@@ -2143,7 +2143,7 @@ if ( ! class_exists( 'WP_V2_Super_Duper' ) ) {
 		 * @return string|void
 		 */
 		public static function shortcode_insert_button( $editor_id = '', $insert_shortcode_function = '' ) {
-			return class_exists('WP_Super_Duper_Shortcode') ? WP_Super_Duper_Shortcode::shortcode_insert_button( $editor_id, $insert_shortcode_function ) : '';
+			return class_exists('WP_V2_Super_Duper_Shortcode') ? WP_V2_Super_Duper_Shortcode::shortcode_insert_button( $editor_id, $insert_shortcode_function ) : '';
 		}
 
 		/**
@@ -2155,7 +2155,7 @@ if ( ! class_exists( 'WP_V2_Super_Duper' ) ) {
 		 * @return mixed|string
 		 */
 		public static function shortcode_button( $id = '', $search_for_id = '') {
-			return class_exists('WP_Super_Duper_Shortcode') ? WP_Super_Duper_Shortcode::shortcode_button( $id, $search_for_id ) : '';
+			return class_exists('WP_V2_Super_Duper_Shortcode') ? WP_V2_Super_Duper_Shortcode::shortcode_button( $id, $search_for_id ) : '';
 		}
 	
 	}
