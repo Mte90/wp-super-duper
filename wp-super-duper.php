@@ -5,7 +5,9 @@
  * @since 1.0.0
  */
 
-defined( 'ABSPATH' ) || exit;
+if ( ! function_exists( 'add_action' ) ) {
+	return;
+}
 
 // Ensure the class is only loaded once.
 if ( ! class_exists( 'WP_V2_Super_Duper' ) ) {
