@@ -5,10 +5,6 @@
  * @since 1.0.0
  */
 
-if ( ! function_exists( 'add_action' ) ) {
-	return;
-}
-
 // Ensure the class is only loaded once.
 if ( ! class_exists( 'WP_V2_Super_Duper' ) ) {
 
